@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
             res.status(200).json(projects)
         })
         .catch(err => {
-            res.status(500).json({ error: 'The information could be retrieved.' })
+            res.status(500).json({ error: 'The information could not be retrieved.' })
         });
 });
 
@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
 });
 
 //Get (project action)
-router.get('/:id/action', (req, res) => {
+router.get('/:id/actions', (req, res) => {
     const { id } = req.params;
     db
         .getProjectActions(id)

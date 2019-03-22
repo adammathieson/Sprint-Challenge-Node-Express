@@ -23,12 +23,12 @@ router.get('/:id', (req, res) => {
         .get(id)
         .then(action => {
             if(!action) {
-                return res.status(404).json({ errorMessage: '' })
+                return res.status(404).json({ errorMessage: 'The acton with the specified ID does not exist.' })
             }
             res.status(202).json(action)
         })
         .catch(err => {
-            res.status(500).json({ error: '' })
+            res.status(500).json({ error: 'Could not retrieve action from database.' })
         });
 });
 
