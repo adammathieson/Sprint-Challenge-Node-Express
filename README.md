@@ -26,13 +26,26 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+a.1). 1. Routing – the ability to select which request handler function is executed depending on the URL visited and HTTP method used. Also breaks the application into smaller parts via routes allowing each part to have its own middleware and routing.
+2. Convenience helpers provide “out of the box” functionality and are regularly utilized on the request and response objects. e.g.  .status() and .send().
+
+
 - [ ] Describe Middleware?
+
+a.2). Most of the code written on the serve is middleware; functions executed in the order they are introduced. The three different types are: built-in (included with Express, though not added automatically); third party (npm modules installed and imported); and custom (functions written by the developer, typically logging or restricting access).
 
 - [ ] Describe a Resource?
 
+a.3). In terms of RESTful Web API design – everything is a resource, and available via a unique URL. They can be represented in multiple ways, but communication with each resource is stateless and they are managed with HTTP methods.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+a.4). HTTP status codes allow for the server to communicate useful information to the client. Depending on what operation the client is attempting to perform, and the end result, a code is sent with response object indicating what is has transpired.
+
+
 - [ ] How can we partition our application into sub-applications?
+
+a.5). Express Routers allow a developer to split an application into sub-applications for the purposes of modularity and ease of use. Reorganizing the code has the added benefit of better readable for future engineers to navigate and make changes.
 
 ## Project Setup
 
